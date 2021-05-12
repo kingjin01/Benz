@@ -1,0 +1,964 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+ul {
+    list-style: none;
+}
+ :root {
+     --gray : #999;
+     --white: #fff;
+ }
+
+
+header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+header .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 11vh;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+header .top .logo {
+    padding: 0px 280px;
+}
+header .top .logo img {
+    width: 65px;
+}
+header .top .logo span {
+    padding: 0px 70px;
+    color: var(--white);
+}
+header .top .join {
+    padding-right: 250px;
+}
+header .top .join a {
+    font-size: .8em;
+    color: var(--gray);
+}
+header .top .join a:hover {
+    color: var(--white);
+}
+/*----------------header TOP--------------------*/
+
+header .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+header .bottom .navigation {
+    display: flex;
+    align-items: center;
+    padding: 15px 300px
+}
+header .bottom .navigation i {
+    color: var(--gray);
+    font-size: 1.3rem;
+}
+header .bottom .navigation ul {
+    display: flex;
+    list-style: none;
+}
+header .bottom .navigation ul li {
+    padding: 0px 20px;
+}
+header .bottom .navigation ul li a {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+header .bottom .navigation ul li a:hover {
+    color: var(--white);
+}
+
+header .bottom .login {
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    padding-right: 270px;
+}
+header .bottom .login a  {
+    color: var(--gray);
+}
+header .bottom .login a:hover {
+    color: var(--white);
+}
+header .bottom .navigation ul img {
+    display: none;
+}
+.hamberger {
+    display: none;
+}
+/*-----------------header BOTTOM----------------*/
+main {
+    background: linear-gradient( #666 ,#262626);
+}
+.slider-position {
+    width: 88%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+main .img-slider {
+    width: 100%;
+    display: flex;
+    /* transform: translateX(-1681); */
+    transition: all .7s ease;
+}
+main .img-slider .item {
+    width: 100%;
+    height: 600px;
+    position: relative;
+
+}
+main .img-slider .item img {
+    width: 1981px;
+    height: 100%;
+    object-fit: cover;
+}
+main .img-slider .item .ft {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-5%);
+    text-align: center;
+    color: var(--white);
+}
+main .img-slider .item .ft h1 {
+    font-size: 2.3rem;
+    font-weight: 550;
+}
+main .img-slider .item .ft p {
+    padding-top: 20px;
+}
+main .img-slider .item .boxs {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-10%,-40%);
+}
+main .img-slider .item .boxs .box {
+    margin-bottom: 2px;
+    position: relative;
+    background-color: rgba(0,0,0,0.9);
+    padding: 70px 100px;
+    color: var(--white);
+    cursor: pointer;
+}
+main .img-slider .item .boxs .box:hover {
+    background-color: rgba(34, 33, 33, 0.9);
+}
+main .img-slider .item .boxs #blue {
+    background-color: rgba(0,173,239,0.9);
+}
+main .img-slider .item .boxs #blue:hover {
+    background-color: rgba(100, 206, 248, 0.9);
+}
+main .img-slider .item .boxs .box h1 {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+main .img-slider .item .boxs .box  .fas {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+}
+/*----------이미지 슬라이더---------------*/
+.dot-items {
+    display: flex;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+}
+
+.dot-items .dot{
+    height: 25px;
+    width: 25px;
+    margin: 0px 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+/*------------점-----------*/
+
+aside {
+    position: fixed;
+    top: 25%;            /*수정*/
+    right: 0;
+    z-index: 1000;
+}
+ /* aside .item { 
+    
+}  */
+aside .items .hover {
+    display: flex;
+    background-color: #00adef;
+    margin-bottom: 3px;
+    padding: 15px 0px;
+    transform: translateX(177px);
+    transition: .5s ease;
+}
+aside .items .hover.zero {
+    transform: translateX(0); 
+}
+aside .items .hover:hover {
+    background-color: #39bbee;
+}
+aside .items .hover a {
+    display: flex;
+}
+aside .items .hover i {
+    color: var(--white);
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+aside .items .hover p {
+    color: var(--white);
+    padding-right: 30px;
+}
+/*----------------사이드 메뉴---------------------*/
+
+.model-items {
+    width: 88%;
+    margin: auto;
+    background-color: #f8f8f8;
+}
+.model-items h1 {
+    padding: 50px 120px;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.model-items .prodect-btn {
+    padding: 0px 120px;
+    display: flex;
+}
+.model-items .prodect-btn .btn {
+    width: 130px;
+    height: 60px;
+    border: 1px solid black;
+    background: none;
+    cursor: pointer;
+    font-weight: 550;
+    font-size: .9em;
+}
+.model-items .prodect-btn .btn.active {
+    background-color: black;
+    color: var(--white);
+}
+.model-items .prodect-btn .btn:hover {
+    background: rgb(221, 214, 214);
+}
+/*----------------프로덕츠 버튼----------------*/
+
+.model {
+    display: flex;
+}
+.model .icon-btn-items {
+    margin-left: 95px;
+}
+.model .icon-btn-items .icon-btn {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid var(--gray);
+}
+.model .icon-btn .model-btn {
+    margin-top: 5px;
+}
+.model .icon-btn .model-btn:nth-child(6) {
+    margin-bottom: 10px;
+}
+.model .icon-btn .model-btn a {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+}
+.model .icon-btn .model-btn a:hover {
+    color: #00adef;
+}
+.model .icon-btn .model-btn a img {
+  width: 40px;
+  height: 40px;
+}
+.model .icon-btn .model-btn a span {
+    text-align: center;
+    padding-left: 15px;
+}
+.model .icon-btn .model-suv a img {
+    transform: rotateY( 180deg);
+}
+.model .icon-btn-items .all {
+    margin-top: 10px;
+    text-align: center;
+}
+.model .icon-btn-items .all a{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: var(--gray);
+}
+.model .icon-btn-items .active a  {
+    color: black;
+}
+/*-----------왼쪽 아이콘 버튼-----------------*/
+
+.car-products {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 155px;
+    border-left: 1px solid var(--gray);
+}
+.car-products .hatchback {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .hatchback h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .hatchback .car {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.car-products .hatchback .car img {
+    width: 500px;
+}
+.car-products .hatchback .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .hatchback .car:hover .car-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+.car-products .hatchback .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .hatchback .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.car-products .hatchback .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .hatchback .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*----------------Hatchback---------------*/
+
+.car-products .sedan {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .sedan h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .sedan .car-items {
+    display: flex;
+    margin-top: 50px;
+}
+.car-products .sedan .car {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 80px;
+    margin: 0px 30px;
+}
+.car-products .sedan .car .new {
+    text-align: center;
+    background-color: #00adef;
+    border: 1px solid #00adef;
+    padding: 4px 8px;
+    margin-top: 10px;
+    border-radius: 60px;
+    color: #fff;
+    font-size: .9em;
+}
+.car-products .sedan .car:nth-child(1) img {
+    padding-top: 40px;
+    width: 300px;
+}
+.car-products .sedan .car img {
+    width: 300px;
+}
+.car-products .sedan .car:nth-child(3) img {
+    width: 400px;
+}
+.car-products .sedan .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .sedan .car:hover .car-btn {
+    transform: translateY(20px);
+    opacity: 1;
+}
+.car-products .sedan .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .sedan .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-120px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.car-products .sedan .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .sedan .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*-------------Sedan---------------*/
+
+.car-products .Coupé {
+    position: relative;
+    height: 110vh;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .Coupé h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .Coupé .car-items {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.car-products .Coupé .car-second {
+    position: absolute;
+    top: 50%;
+    display: flex;
+}
+.car-products .Coupé .car {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 80px;
+    margin: 0px 30px;
+}
+.car-products .Coupé .car .new {
+    text-align: center;
+    background-color: #00adef;
+    border: 1px solid #00adef;
+    padding: 4px 8px;
+    margin-top: 10px;
+    border-radius: 60px;
+    color: #fff;
+    font-size: .9em;
+}
+.car-products .Coupé .car img {
+    width: 300px;
+}
+.car-products .Coupé .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .Coupé .car:hover .car-btn {
+    transform: translateY(20px);
+    opacity: 1;
+}
+.car-products .Coupé .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .Coupé .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-120px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.car-products .Coupé .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .Coupé .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*---------------Coupé-------------*/
+
+.car-products .roadster {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .roadster h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .roadster .car {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.car-products .roadster .car img {
+    width: 500px;
+}
+.car-products .roadster .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .roadster .car:hover .car-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+.car-products .roadster .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .roadster .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.car-products .roadster .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .roadster .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*----------------Roadster-------------------*/
+
+.car-products .suv {
+    position: relative;
+    height: 150vh;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .suv h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .suv .car-items {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.car-products .suv .car-second {
+    position: absolute;
+    top: 35%;  /*수정*/
+    display: flex;
+}
+.car-products .suv .car-third {
+    position: absolute;
+    display: flex;
+    top: 65%;
+}
+.car-products .suv .car {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 80px;
+    margin: 0px 30px;
+}
+.car-products .suv .car .new {
+    text-align: center;
+    background-color: #00adef;
+    border: 1px solid #00adef;
+    padding: 4px 8px;
+    margin-top: 10px;
+    border-radius: 60px;
+    color: #fff;
+    font-size: .9em;
+}
+.car-products .suv .car img {
+    width: 300px;
+}
+.car-products .suv .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .suv .car:hover .car-btn {
+    transform: translateY(20px);
+    opacity: 1;
+}
+.car-products .suv .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .suv .car-third .car .power-car {
+    border: 1px solid black;
+    font-size: .5rem;
+    padding: 5px;
+    border-radius: 70px;
+    margin-top: 13px;
+}
+.car-products .suv .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-120px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.car-products .suv .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .suv .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*-------------------SUV------------------------*/
+
+.car-products .cabriolet {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px
+}
+.car-products .cabriolet h4 {
+    width: 80%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.car-products .cabriolet .car {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.car-products .cabriolet .car img {
+    width: 500px;
+}
+.car-products .cabriolet .car:hover {
+    background-color: var(--gray);
+    height: 450px;  /*수정*/
+}
+.car-products .cabriolet .car:hover .car-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+.car-products .cabriolet .car span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.car-products .cabriolet .car .car-btn {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid var(--gray);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all .7s ease;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.car-products .cabriolet .car .car-btn i {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.car-products .cabriolet .car .car-btn:hover {
+    background-color: rgba(236, 215, 215, 0.705);
+}
+/*---------------------Cabriolet-----------------------*/
+
+.reference {
+    width: 80%;
+    margin: auto;
+    height: 16vh;
+    margin-top: 50px;
+}
+.reference .top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray);
+}
+.reference .top h4 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.reference .top i {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.reference .top i.rotate {
+        transform: rotate(180deg);
+}
+
+.reference .bottom {
+    line-height: 100px;
+    color: var(--gray);
+}
+.reference .bottom.a {
+    display: none;
+}
+/*-------------참고 사항-----------------*/
+
+footer {
+    background:  #262626;
+}
+.box-items {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+}
+.box-items .box {
+    position: relative;
+    background: #161616;
+    margin: 0px 10px;
+    width: 250px;
+    height: 100px;
+}
+.box-items .box:hover {
+    background-color: rgb(34, 31, 31);
+}
+.box-items .box span {    
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    color: var(--white);
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.box-items .box i {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+/*-------------------박스--------------------------------------------*/
+
+.gatagory {
+    display: flex;
+    justify-content: center;
+}
+.gatagory .ft {
+    padding: 0px 50px;
+}
+.gatagory .ft h2 {
+    color:  var(--white);
+}
+.gatagory .ft ul {
+    padding: 20px 0px;
+    color: var(--gray);
+}
+.gatagory .ft ul li {
+    cursor: pointer;
+    padding: 10px 0px;
+    display: block;
+}
+.gatagory .ft ul li:hover {
+    color: var(--white);
+}
+.gatagory .ft ul li:after {
+    content: "";
+    width: 0;
+    display: block;
+    padding-top: 3px;
+    border-bottom: 1px solid var(--white);
+    transition: all .5s;
+}
+.gatagory .ft ul li:hover:after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 3px;
+    border-bottom: 1px solid var(--white);
+}
+/*--------------메뉴----------------*/
+
+@media screen and (max-width: 1200px){
+    header .top {
+        display: block;
+    }
+    header .top .join a {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        margin-right: 30px;
+    }
+    header .bottom {
+        justify-content: start;
+        height: 65px;
+    }
+    header .bottom .navigation {
+        padding: 0;
+        margin-left: 20px;
+    }
+    header .bottom .login a{
+        margin-left: 20px;
+    }
+    header .bottom .navigation .sohw-menu {
+        display: none;
+    }
+    header .bottom .navigation .sohw-menu.show{
+        position: fixed;
+        display: block;
+        top: 15%;
+        left: 5%;
+        background-color: #fff;
+        flex-direction: column;
+        z-index: 1000;
+        width: 50%;
+        border-radius: 30px;
+    }
+    header .bottom .navigation .sohw-menu li {
+        padding: 20px 100px;
+        font-size: 1.8rem;
+    }
+    header .bottom .navigation .sohw-menu li::after {
+        content: "";
+        display: flex;
+        margin-top: 20px;
+        border: 1px solid rgb(218, 211, 211);
+    }
+    header .bottom .navigation .sohw-menu img {
+        position: absolute;
+        display: block;
+        top: 3%;
+        right: 5%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    header .bottom .hamberger {
+        position: absolute;
+        top: 65%;
+        right: 0;
+        display: block;
+        background-color: #fff;
+    }
+    header .bottom .hamberger img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    .item img{
+        width: 1200px;
+    }
+    .dot {
+        display: none;
+    }
+
+    .car-products .sedan {
+        height: 175vh;
+    }
+    .sedan .car-items {
+        flex-wrap: wrap;
+    }
+
+    .car-products .Coupé {
+        height: 340vh;
+    }
+
+    .car-products .suv {
+        height: 440vh;
+    }
+
+    .car-products .suv .car-third {
+        top: 70%;
+    }
+}
