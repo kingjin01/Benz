@@ -1,4 +1,5 @@
 const Btns = document.querySelectorAll('.model-btn');
+const All = document.querySelector('.all');
 
 const carProducts = document.querySelector('.car-products');
 
@@ -11,13 +12,78 @@ const cabriolet = document.querySelector('.cabriolet');
 
 Btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
+        console.log(e.target)
 
         e.preventDefault();
 
         const btnDate = btn.dataset.car;
 
-        // if(btnDate === hatchback.dataset.kind) {
-        //     carProducts.textContent = hatchback;
-        // }
-    })
+        if(e.target) {
+            e.target.classList.add('active');
+        }else{
+            e.target.classList.remove('active');
+        }
+
+        if(btnDate === hatchback.dataset.kind) {
+            hatchback.style.display = 'block';
+            sedan.style.display = 'none';
+            Coupé.style.display = 'none';
+            suv.style.display = 'none';
+            roadster.style.display = 'none';
+            cabriolet.style.display = 'none';
+        }
+
+        if(btnDate === sedan.dataset.kind) {
+            hatchback.style.display = 'none';
+            sedan.style.display = 'block';
+            Coupé.style.display = 'none';
+            suv.style.display = 'none';
+            roadster.style.display = 'none';
+            cabriolet.style.display = 'none';
+        }
+
+        if(btnDate === Coupé.dataset.kind) {
+            hatchback.style.display = 'none';
+            sedan.style.display = 'none';
+            Coupé.style.display = 'block';
+            suv.style.display = 'none';
+            roadster.style.display = 'none';
+            cabriolet.style.display = 'none';
+        }
+
+        if(btnDate === suv.dataset.kind) {
+            hatchback.style.display = 'none';
+            sedan.style.display = 'none';
+            Coupé.style.display = 'none';
+            suv.style.display = 'block';
+            roadster.style.display = 'none';
+            cabriolet.style.display = 'none';
+        }
+
+        if(btnDate === roadster.dataset.kind) {
+            hatchback.style.display = 'none';
+            sedan.style.display = 'none';
+            Coupé.style.display = 'none';
+            suv.style.display = 'none';
+            roadster.style.display = 'block';
+            cabriolet.style.display = 'none';
+        }
+
+        if(btnDate === cabriolet.dataset.kind) {
+            hatchback.style.display = 'none';
+            sedan.style.display = 'none';
+            Coupé.style.display = 'none';
+            suv.style.display = 'none';
+            roadster.style.display = 'none';
+            cabriolet.style.display = 'block';
+        }
+        if(btnDate === All.dataset.car) {
+            hatchback.style.display = 'block';
+            sedan.style.display = 'block';
+            Coupé.style.display = 'block';
+            suv.style.display = 'block';
+            roadster.style.display = 'block';
+            cabriolet.style.display = 'block';
+        }
+    });
 });
