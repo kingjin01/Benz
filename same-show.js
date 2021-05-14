@@ -20,7 +20,7 @@ Btns.forEach(function(btn){
 
         if(e.target) {
             e.target.classList.add('active');
-        }else{
+        }else if(!e.target){
             e.target.classList.remove('active');
         }
 

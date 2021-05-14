@@ -301,6 +301,9 @@ aside .items .hover p {
     text-align: center;
     padding-left: 15px;
 }
+.model .icon-btn .model-btn a .active {
+    color: black;
+}
 .model .icon-btn .model-suv a img {
     transform: rotateY( 180deg);
 }
@@ -308,13 +311,14 @@ aside .items .hover p {
     margin-top: 10px;
     text-align: center;
 }
-.model .icon-btn-items .all a{
+.model .icon-btn-items .all span{
     text-align: center;
     font-size: 1.3em;
     font-weight: bolder;
     color: var(--gray);
+    cursor: pointer;
 }
-.model .icon-btn-items .active a  {
+.model .icon-btn-items .active span  {
     color: black;
 }
 /*-----------왼쪽 아이콘 버튼-----------------*/
