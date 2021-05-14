@@ -13,4 +13,24 @@ function slide() {
 
 }
 
-setInterval(slide,4000);
+// function enter() {
+//     Item.forEach(function(Items){
+//         Items.addEventListener('mouseenter', function(e){
+//             clearInterval(interval);
+//         })
+//     })
+// }
+
+// function out() {
+//     Item.forEach(function(Items){
+//         Items.addEventListener('mouseout', function(e){
+//             setInterval(slide,4000);
+//         });
+//     });
+// }
+
+// enter();
+// out();
+
+    const interval = setInterval(slide,4000);
+
