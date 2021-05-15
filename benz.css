@@ -297,7 +297,7 @@ aside .items .hover p {
   width: 40px;
   height: 40px;
 }
-.model .icon-btn .model-btn a span {
+.model .icon-btn .model-btn a .hide {
     text-align: center;
     padding-left: 15px;
 }

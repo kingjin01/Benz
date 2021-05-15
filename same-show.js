@@ -1,5 +1,6 @@
 const Btns = document.querySelectorAll('.model-btn');
 const All = document.querySelector('.all');
+const Spans = document.querySelectorAll('.icon-btn-items .icon-btn .model-btn span')
 
 const carProducts = document.querySelector('.car-products');
 
@@ -86,4 +87,21 @@ Btns.forEach(function(btn){
             cabriolet.style.display = 'block';
         }
     });
+});
+
+
+
+const handleClick = function(e) {
+
+    Spans.forEach(function(span){
+        span.classList.remove('active');
+    });
+
+    e.target.classList.add('active')
+}
+
+Spans.forEach(function(btn){
+
+    btn.addEventListener('click', handleClick);
+
 });
